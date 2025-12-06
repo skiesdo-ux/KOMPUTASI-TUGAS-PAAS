@@ -1,63 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aplikasi PaaS Sederhana</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplikasi PaaS - Demo</title>
 
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
             margin: 0;
-            padding: 30px;
-            text-align: center;
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, #5b86e5, #36d1dc);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            overflow: hidden;
         }
+
         .card {
-            background: white;
-            max-width: 400px;
-            margin: auto;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 40px;
+            width: 380px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            animation: fadeIn 1s ease-in-out;
         }
-        button {
-            margin-top: 15px;
-            padding: 10px 20px;
-            background: #4CAF50;
-            border: none;
-            border-radius: 8px;
-            color: white;
+
+        h1 {
+            margin-top: 0;
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 25px;
             font-size: 16px;
-            cursor: pointer;
+            opacity: 0.9;
         }
-        button:hover {
-            background: #45a049;
-        }
-        #output {
-            margin-top: 20px;
-            font-size: 20px;
-            font-weight: bold;
+
+        button {
+            padding: 12px 25px;
+            background: #fff;
             color: #333;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.07);
+            background: #f0f0f0;
+        }
+
+        #output {
+            margin-top: 25px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="card">
-        <h2>Aplikasi Web Sederhana (PaaS)</h2>
-        <p>Tekan tombol untuk menampilkan pesan.</p>
+        <h1>PaaS Web Application</h1>
+        <p>Contoh aplikasi sederhana yang dijalankan melalui Platform as a Service.</p>
 
-        <button onclick="showMessage()">Klik Aku</button>
+        <button onclick="showMessage()">Klik untuk mulai</button>
 
         <div id="output"></div>
     </div>
 
     <script>
         function showMessage() {
-            document.getElementById("output").innerHTML = "Halo! Aplikasi ini berjalan di layanan <b>PaaS</b> 🎉";
+            const text = "Aplikasi berhasil berjalan di layanan PaaS! 🚀";
+            document.getElementById("output").innerHTML = text;
         }
     </script>
 </body>
-</html>
-
