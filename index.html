@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi PaaS Sederhana</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 30px;
+            text-align: center;
+        }
+        .card {
+            background: white;
+            max-width: 400px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #4CAF50;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h2>Aplikasi Web Sederhana (PaaS)</h2>
+        <p>Tekan tombol untuk menampilkan pesan.</p>
+
+        <button onclick="showMessage()">Klik Aku</button>
+
+        <div id="output"></div>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("output").innerHTML = "Halo! Aplikasi ini berjalan di layanan <b>PaaS</b> 🎉";
+        }
+    </script>
+</body>
+</html>
 
